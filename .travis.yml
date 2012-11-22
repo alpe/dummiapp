@@ -1,3 +1,25 @@
 language: ruby
 rvm:
   - 1.9.3
+env:
+  global:
+    - secure: "M1LkJFtqABalKzl/yHk7H96DRZcCxCCSvMIic6SsHvCKjnu3sDkhRPakVnkn\nndc+Si2ou077qhyg5uLSNltV66yUtPTCrvnEGV9/3Y2EUj0jn3DcOindIFve\nyoSssCQ8RspEXhKeuYumsxANS+amodBo3lS0shBwX2xwSe9rNUA="
+
+after_script:
+after_script:
+  # Install the Heroku gem (or the Heroku toolbelt)
+  - gem install heroku
+  # Add your Heroku git repo:
+  - git remote add heroku git@heroku.com:YOUR_HEROKU_APP.git
+  # Turn off warnings about SSH keys:
+  - echo "Host heroku.com" >> ~/.ssh/config
+  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+  - echo "   CheckHostIP no" >> ~/.ssh/config
+  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+  # Clear your current Heroku SSH keys:
+  - heroku keys:clear
+  # Add a new SSH key to Heroku
+  - yes | heroku keys:add
+  # Push to Heroku!
+  - yes | git push heroku master
+
