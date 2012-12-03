@@ -6,7 +6,6 @@ env:
     - secure: "M1LkJFtqABalKzl/yHk7H96DRZcCxCCSvMIic6SsHvCKjnu3sDkhRPakVnkn\nndc+Si2ou077qhyg5uLSNltV66yUtPTCrvnEGV9/3Y2EUj0jn3DcOindIFve\nyoSssCQ8RspEXhKeuYumsxANS+amodBo3lS0shBwX2xwSe9rNUA="
 
 after_script:
-after_script:
   # Install the Heroku gem (or the Heroku toolbelt)
   - gem install heroku
   # Add your Heroku git repo:
