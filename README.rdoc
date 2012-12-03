@@ -1,1 +1,10 @@
 sample app for CD tests
+
+travis to heroku:
+
+.travis.yml
+http://metabates.com/2012/10/23/deploying-to-heroku-from-travisci/
+
+secure env values
+>travis encrypt your_username/your_repo HEROKU_API_KEY=<your key here>
+http://stackoverflow.com/questions/10235026/how-to-deploy-an-rails-app-on-heroku-from-travis-ci
